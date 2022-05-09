@@ -8,9 +8,26 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
+
+<?php
+include __DIR__ . "./album.php";
+?>
+<?php
+    // var_dump($database)
+    ?>
 <body>
   <div id="app">
-    
+    <?php
+    foreach($database as $album => $voce){
+     echo "$album";
+     echo "</br>";
+     foreach($voce as $caratteristica => $descrizione){
+         echo "$caratteristica - $descrizione";
+         echo "</br>";
+     }
+     echo "</br>----------------</br>";
+    }
+    ?>
   </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
