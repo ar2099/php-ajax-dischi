@@ -65,9 +65,35 @@
 <body>
    
 
+<div class="sopra">
+<i class="fa-brands fa-spotify"></i>
+</div>
 
-<?php
+<div class="corpo">
+    <div class="posto-album">
 
-?>
+        <div class="album" >
+            <img src="https://m.media-amazon.com/images/I/61-SqB4BxPL._AC_SX466_.jpg" alt="album" class="img-album">
+            <p class="titolo">VIVA</p>
+            <p class="autore">Pooh</p>
+            <p class="anno">1986</p>
+        </div>
+
+        <?php foreach($database as $album){ ?>
+            <div class="album" >
+            <img src="<?php echo $album['poster']?>" alt="album" class="img-album">
+            <p class="titolo"><?php echo $album['title']?></p>
+            <p class="autore"><?php echo $album['author']?></p>
+            <p class="anno"><?php echo $album['year']?></p>
+        </div>
+        <?php } ?>
+
+    </div>
+</div>
+
+
+
+
 </body>
 </html>
+
